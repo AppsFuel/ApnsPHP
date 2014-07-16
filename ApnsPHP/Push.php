@@ -230,6 +230,16 @@ class ApnsPHP_Push extends ApnsPHP_Abstract
 	}
 
 	/**
+	 * Returns actual queue length.
+	 *
+	 * @return @type integer The length of the actual queue.
+	 */
+	public function getQueueLength()
+	{
+		return count($this->_aMessageQueue);
+	}
+
+	/**
 	 * Returns messages not delivered to the end user because one (or more) error
 	 * occurred.
 	 *

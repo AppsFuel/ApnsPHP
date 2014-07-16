@@ -349,6 +349,18 @@ abstract class ApnsPHP_Abstract
 	}
 
 	/**
+	 * Check if we are connected
+	 *
+	 * @return @type boolean True if connected.
+	 */
+	public function isConnected()
+	{
+		//TODO: Verify if the socket was disconnected by the server?
+		return is_resource($this->_hSocket);
+	}
+
+
+	/**
 	 * Disconnects from Apple Push Notifications service server.
 	 *
 	 * @return @type boolean True if successful disconnected.
